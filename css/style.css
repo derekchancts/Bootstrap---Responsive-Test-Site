@@ -1,3 +1,11 @@
+
+:root {
+  --first-color: hsl(208, 42%, 49%);
+  --second-color: hsl(7, 78%, 38%);
+  --third-color: hsl(208, 54%, 62%);
+}
+
+
 /*-- Body Reset --*/
 body {
   overflow-x: hidden;
@@ -39,7 +47,8 @@ body {
 }
 .nav-link.active,
 .nav-link:hover {
-  color: #4981b3!important;
+  /* color: #4981b3!important; */
+  color: var(--first-color)!important;
 }
 .navbar-nav{
   text-align: center;
@@ -84,13 +93,14 @@ body {
   text-shadow: .1rem .1rem .3rem rgba(0,0,0,.1);
 }
 .border-primary {
-  border-top: .2rem solid #4981b3!important;
+  border-top: .2rem solid var(--first-color)!important;
 }
 .carousel-caption h3 {
   font-size: 2.2rem;
   text-shadow: .1rem .1rem .2rem rgba(0,0,0,.1);
 }
 /* .btn-md, */
+/* .carousel-inner .btn-lg  */
 .btn-lg {
   border-radius: 0;
   text-transform: uppercase;
@@ -98,17 +108,17 @@ body {
   border-width: medium;
 }
 .btn-danger {
-  background: #ac2615;
-  border: .05rem solid #ac2615;
+  background: var(--second-color);
+  border: .05rem solid var(--second-color);
 }
 .btn-primary {
-  background: #4981b3;
-  border: .05rem solid #4981b3;
+  background: var(--first-color);
+  border: .05rem solid var(--first-color);
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background: #68a0d2!important;
-  border: .05rem solid #68a0d2!important;
+  background: var(--third-color)!important;
+  border: .05rem solid var(--third-color)!important;
 }
 
 
@@ -140,7 +150,7 @@ body {
 
 /*-- Emoji Navbar --*/
 .emoji {
-  background-image: linear-gradient(to right, #4981b3, #ac2615);
+  background-image: linear-gradient(to right, var(--first-color), var(--second-color));
   min-height: 0!important;
   padding: .4rem 0!important;
 }
@@ -185,14 +195,14 @@ footer .svg-inline--fa {
   font-size: 2.3rem;
 }
 footer .svg-inline--fa:hover {
-  color: #68a0d2;
+  color: var(--third-color);
 }
 
 
 /*============= SOCKET =============*/
 .socket {
   background-color: #222;
-  border-top: .1rem solid #4981b3;
+  border-top: .1rem solid var(--first-color);
 }
 
 
@@ -244,6 +254,8 @@ Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 
 =============*/
+
+
 
 /*-- Bootstrap Mobile Gutter Fix --*/
 .row, .container-fluid {
